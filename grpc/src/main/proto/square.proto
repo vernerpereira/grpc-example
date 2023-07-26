@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package io.arcotech;
+
+option java_package = "io.arcotech";
+option java_multiple_files = true;
+
+service SquareRpc {
+  rpc findSquareUnary(Input) returns (Output) {};
+  rpc findSquareServerStream(Input) returns (stream Output) {};
+  rpc findSquareClientStream(stream Input) returns (Output) {};
+  rpc findSquareFullDuplexStream(stream Input) returns (stream Output) {};
+}
+
+message Input {
+  int32 number = 1;
+}
+
+message Output {
+  int32 number = 1;
+  int32 result = 2;
+}

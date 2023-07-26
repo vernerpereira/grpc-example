@@ -1,0 +1,5 @@
+server:
+  port: ${SERVER_PORT:9013}
+
+grpc:
+  port: ${SERVER_PORT:50051}

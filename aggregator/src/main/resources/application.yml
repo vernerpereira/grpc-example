@@ -1,0 +1,13 @@
+server:
+  port: ${SERVER_PORT:9011}
+
+rest:
+  square:
+    service:
+      endpoint: ${REST_ENDPOINT:http://localhost:9012}
+
+grpc:
+  square:
+    service:
+      host: ${GRPC_HOST:localhost}
+      port: ${GRPC_PORT:50051}
